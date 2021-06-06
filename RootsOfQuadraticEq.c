@@ -5,7 +5,7 @@
 int main()
 {
     float i, a, b, c, D, root, root1, root2, real, img;
-    char choice='y';
+    char choice;
     do
     {
         printf("Enter the coefficient of a: ");
@@ -38,6 +38,6 @@ int main()
         printf("\nWant to calculate roots one more time?(Y/N): ");
         scanf(" %c",&choice);
 
-    } while(choice=='y');
+    } while(choice=='Y');
     
 }
