@@ -35,9 +35,9 @@ int main()
             printf("Roots are %.2f+%.2fi AND %.2f-%.2fi", real, img, real, img);
             printf("\nRoots are imaginary and different");
         }
-        printf("\nWant to calculate roots one more time?(Y/N): ");
+        printf("\nWant to calculate roots one more time?(Press Y or y for YES / Press N or n for NO): ");
         scanf(" %c",&choice);
 
-    } while(choice=='Y');
+    } while(choice == 'Y' || choice == 'y');
     
 }
