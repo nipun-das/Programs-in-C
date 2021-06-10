@@ -1,3 +1,6 @@
+/*Reverse of a Number*/
+
+
 #include <stdio.h>
 int main()
 {
@@ -7,9 +10,9 @@ int main()
 
     while (n != 0)
     {
-        r = n % 10;
-        rev = rev * 10 + r;
-        n = n / 10;
+        r = n % 10;  /*When divided by 10, remainder gives the last digit of the input number*/
+        rev = rev * 10 + r;   /*stores the digit in rev)*/
+        n = n / 10;  /*Quotient gives hte remaining digits to the left of last digit and then the loop..*/
     }
     printf("The reverse of %d is %d", n, rev);
 
