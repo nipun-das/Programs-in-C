@@ -8,14 +8,16 @@ int main()
     printf("Enter the number: ");
     scanf("%d", &n);
     num = n;
-
+    
+    /*CHECK NUMBER OF DIGITS*/
     while (num > 0)
     {
         num = num / 10;
         i++;
     }
     num = n;
-
+ 
+    
     while (num > 0)
     {
         r = num % 10;
