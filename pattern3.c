@@ -1,3 +1,19 @@
+/*Pattern3*/
+/*
+for eg.for 5 rows
+*
+* *
+* * *
+* * * *
+* * * * *
+* * * *
+* * *
+* *
+*
+
+*/
+
+
 #include <stdio.h>
 void main()
 {
