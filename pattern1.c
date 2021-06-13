@@ -1,3 +1,14 @@
+/*Pattern1*/
+/*
+for eg.for 5 rows
+*
+* *
+* * *
+* * * *
+* * * * *
+
+*/
+/*Notice that no. of columns printed in each row is equal to row no. */
 #include <stdio.h>
 void main()
 {
@@ -6,7 +17,7 @@ void main()
     scanf("%d", &no_of_rows);
     for (row = 1; row <= no_of_rows; row++)
     {
-        for (column = 1; column <= row; column++)  /*Number of columns made to increase linearly with Number of rows so that the pattern looks symmetrical */
+        for (column = 1; column <= row; column++)  \
         {
             printf("* ");
         }
