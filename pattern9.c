@@ -1,3 +1,18 @@
+/*Pattern9
+
+01
+02 03
+04 05 06
+07 08 09 10
+11 12 13 14 15
+16 17 18 19
+20 21 22
+23 24
+25
+
+Notice the changes made to display them with 2 character spaces
+*/
+
 #include <stdio.h>
 void main()
 {
@@ -10,7 +25,7 @@ void main()
     {
         for (column = 1; column <= row; column++)
         {
-            printf("%d ", a++);
+            printf("%02d ", a++);   // %02d makes characters print with 2 character spaces and if there are no 2 character spaces, includes a 0 with it .
         }
         printf("\n");
     }
@@ -18,7 +33,7 @@ void main()
     {
         for (column = 1; column <= row; column++)
         {
-            printf("%d ", a++);
+            printf("%02d ", a++);
         }
         printf("\n");
     }
