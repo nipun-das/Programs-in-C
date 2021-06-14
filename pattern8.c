@@ -1,5 +1,18 @@
-//Pattern8
-//
+/*Pattern8*/
+/*
+for eg.for 5 rows
+
+A
+B C
+D E F
+G H I J
+K L M N O
+P Q R S
+T U V
+W X
+Y
+
+*/
 
 
 
