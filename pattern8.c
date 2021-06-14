@@ -1,3 +1,8 @@
+//Pattern8
+//
+
+
+
 #include <stdio.h>
 void main()
 {
