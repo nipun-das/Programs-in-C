@@ -1,4 +1,4 @@
-/*Armstrong Number Check*/
+//Armstrong Number Check
 
 #include <stdio.h>
 #include <math.h>
@@ -9,7 +9,7 @@ int main()
     scanf("%d", &n);
     num = n;
     
-    /*CHECK NUMBER OF DIGITS*/
+    //CHECK NUMBER OF DIGITS
     while (num > 0)
     {
         num = num / 10;
