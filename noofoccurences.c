@@ -1,3 +1,5 @@
+//No of Occurences in a 1D array
+
 #include <stdio.h>
 int main()
 {
