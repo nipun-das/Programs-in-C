@@ -1,4 +1,4 @@
-/*LEAP YEAR CHECK*/
+//LEAP YEAR CHECK
 
 #include <stdio.h>
 void main()
