@@ -1,3 +1,5 @@
+//To find the locations of an element that is repeated in an array
+
 #include <stdio.h>
 void main()
 {
