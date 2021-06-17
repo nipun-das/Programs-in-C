@@ -1,3 +1,5 @@
+//To calculate the number of times an element repeats in an array
+
 #include <stdio.h>
 int main()
 {
