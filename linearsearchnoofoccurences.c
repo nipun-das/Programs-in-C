@@ -3,16 +3,19 @@
 #include <stdio.h>
 int main()
 {
-    int a[10], i = 0, f = 0;
-    int c, n;
-    printf("Enter the elements of the array: ");
-    for (c = 0; c < 10; c++)
+    int c, n, num, i = 0, f = 0;
+    printf("Enter the Number of elements in the array:\n");
+    scanf("%d", &num);
+
+    int a[num];
+    printf("Enter the elements of the array:\n");
+    for (c = 0; c < num; c++)
     {
         scanf("%d", &a[c]);
     }
-    printf("Enter the Element to check in the array for multiple occ. : ");
+    printf("Enter the Element to check in the array for multiple occ.:\n");
     scanf("%d", &n);
-    for (c = 0; c < 10; c++)
+    for (c = 0; c < num; c++)
     {
         if (a[c] == n)
         {
