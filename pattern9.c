@@ -9,7 +9,6 @@
 20 21 22
 23 24
 25
-
 Notice the changes made to display them with 2 character spaces
 */
 
