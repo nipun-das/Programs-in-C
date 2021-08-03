@@ -1,3 +1,4 @@
 Hi.
-Since I am a beginner in programming in C , I have uploaded some of the programs created by me here.
+These are some of the simplest programs in C.
+I hope you find these useful.
 Thanks.
