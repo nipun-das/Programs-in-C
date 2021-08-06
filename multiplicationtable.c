@@ -1,7 +1,7 @@
 #include <stdio.h>
 void main()
 {
-    int a, b, c, i;
+    int a, b, i;
     printf("Enter the number whose multiplication table you want: ");
     scanf("%d", &a);
     for (i = 1; i < 11; i++)
