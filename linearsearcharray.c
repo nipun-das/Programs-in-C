@@ -1,7 +1,7 @@
 #include <stdio.h>
 void main()
 {
-    int m, i, n;
+    int m, i, n, count = 0;
 
     printf("Enter the no. of elements: ");
     scanf("%d", &m);
@@ -19,10 +19,11 @@ void main()
         if (a[i] == n)
         {
             printf("Your number %d is at location %d", n, i);
+            count++;
             break;
         }
     }
-    if (i == m)
+    if (count == 0)
     {
         printf("Your Number %d is not found", n);
     }
