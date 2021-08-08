@@ -10,9 +10,11 @@ int main()
     {
         scanf("%d", &a[i]);
     }
-    for (i = 0; i < n - 1; i++)
+    //If number of elements is n , number of passes is n-1
+    
+    for (i = 0; i < n - 1; i++) //This for loop for passes
     {
-        for (j = 0; j < n - 1 - i; j++) //If number of elements is n , number of passes is n-1
+        for (j = 0; j < n - 1 - i; j++) //This for loop for comparing adjacent elements
         {
             if (a[j] > a[j + 1])
             {
