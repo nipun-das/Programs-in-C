@@ -1,26 +1,26 @@
 //Concatenate string
-
-#include <stdio.h>
 #include <string.h>
+#include <stdio.h>
 void main()
 {
+    int i = 0, j = 0;
     char str1[20], str2[20], str3[40];
-    int i, j, len;
-    printf("Enter the string 1:\n");
+    printf("enter the first string\n");
     gets(str1);
-    printf("Enter the string 2:\n");
+    printf("enter the second string\n");
     gets(str2);
-    for (i = 0; str1[i] != '\0'; i++)
+    while (str1[i] != '\0')
     {
-        str3[i] = str1[i];
+        str3[j] = str1[i];
+        i++, j++;
     }
-
-    str3[strlen(str1)] = ' ';
-
-    for (i = 0, j = strlen(str1) + 1; str2[i] != '\0'; i++, j++)
+    i = 0;
+    str3[j++] = ' ';
+    while (str2[i] != '\0')
     {
         str3[j] = str2[i];
+        i++, j++;
     }
-    str3[j] != '\0';
-    printf("The concatenated string is: %s", str3);
+    str3[j] = '\0';
+    printf("concatenated string is\n %s\n", str3);
 }
