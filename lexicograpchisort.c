@@ -1,3 +1,6 @@
+In mathematics, the lexicographic or lexicographical order is a generalization of the alphabetical order of the dictionaries to sequences of ordered symbols or,
+more generally, of elements of a totally ordered set.
+
 #include <stdio.h>
 #include <string.h>
 void main()
