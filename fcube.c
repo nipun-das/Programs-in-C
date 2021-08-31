@@ -1,5 +1,5 @@
 #include <stdio.h>
-int cube(int);
+int cube(int a);
 int main()
 {
     int x, r;
