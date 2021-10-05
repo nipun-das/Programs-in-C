@@ -1,12 +1,18 @@
+//Program to find transpose of a matrix
+
 #include <stdio.h>
 void main()
 {
     int m, n, i, j;
+
+    //Entering number of rows and columns
     printf("Enter the number of rows:\n");
     scanf("%d", &m);
     printf("Enter the number of columns:\n");
     scanf("%d", &n);
     int a[m][n], b[n][m];
+
+    //Entering elements into the array
     for (i = 0; i < m; i++)
     {
         for (j = 0; j < n; j++)
@@ -22,6 +28,8 @@ void main()
             b[i][j] = a[j][i];
         }
     }
+
+    //Displaying the enetered matrix
     printf("\nThe matrix you enteredis:\n");
     for (i = 0; i < m; i++)
     {
@@ -32,6 +40,7 @@ void main()
         printf("\n");
     }
 
+    //Displaying transpose matrix
     printf("\nThe transpose of the matrix is:\n");
     for (i = 0; i < n; i++)
     {
