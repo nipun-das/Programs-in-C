@@ -1,7 +1,11 @@
+//Finding the product of 2 matrices
+
 #include <stdio.h>
 void main()
 {
     int m, n, i, j, p, q, k;
+
+    //Entering matrix elements
     printf("Enter the no. of rows of first matrix:\n");
     scanf("%d", &m);
     printf("Enter the no. of columns of first matrix:\n");
@@ -11,6 +15,7 @@ void main()
     printf("Enter the no. of columns of second matrix:\n");
     scanf("%d", &q);
 
+    //Number of columns of first matrix equal to number of rows of second matrix implies that matrix multiplication is impossible
     if (n != p)
     {
         printf("Matrix multiplication is not possible");
@@ -35,6 +40,7 @@ void main()
             }
         }
 
+        //Displaying first matrix
         printf("The first matrix is:\n");
         for (i = 0; i < m; i++)
         {
@@ -44,6 +50,8 @@ void main()
             }
             printf("\n");
         }
+
+        //Displaying second matrix
         printf("The second matrix is:\n");
         for (i = 0; i < p; i++)
         {
@@ -53,6 +61,7 @@ void main()
             }
             printf("\n");
         }
+        
         for (i = 0; i < m; i++)
         {
             for (j = 0; j < n; j++)
@@ -64,6 +73,7 @@ void main()
                 }
             }
         }
+        //Displaying product matrix
         printf("The product matrix is:\n");
         for (i = 0; i < m; i++)
         {
