@@ -25,7 +25,7 @@ void main()
     {
         for (j = 0; j < m; j++)
         {
-            b[i][j] = a[j][i];
+            b[i][j] = a[j][i]; //b[j][i] = a[i][j]; is also correct
         }
     }
 
