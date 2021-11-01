@@ -1,3 +1,5 @@
+//Check whether a matrix is identity matrix or not
+
 #include <stdio.h>
 void main()
 {
