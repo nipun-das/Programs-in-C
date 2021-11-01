@@ -22,5 +22,5 @@ void main()
         i++, j++;
     }
     str3[j] = '\0';
-    printf("concatenated string is\n %s\n", str3);
+    printf("concatenated string is -%s\n", str3);
 }
