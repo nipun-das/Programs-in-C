@@ -5,7 +5,7 @@ numbers.*/
 #include <stdio.h>
 void main()
 {
-    int i, n, c, p;
+    int i, j, n, c, p;
     printf("Enter the size of array: ");
     scanf("%d", &n);
     int a[n];
@@ -52,7 +52,12 @@ void main()
             {
                 if (a[i] % 2 == 0)
                 {
-                    a[i] = -1;
+                    for (j = i; j < n - 1; j++)
+                    {
+                        a[j] = a[j + 1];
+                    }
+                    n--;
+                    i--;
                 }
                 else
                 {
