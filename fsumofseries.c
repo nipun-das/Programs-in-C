@@ -2,14 +2,14 @@
 
 #include <stdio.h>
 #include <math.h>
-long int factorial(int);
-float sum(int);
+long int factorial(int n);
+float sum(int n);
 int main()
 {
-    int n;
+    int a;
     printf("\nEnter the Number of terms :");
-    scanf("%d", &n);
-    printf("\nSum of series = %f", sum(n));
+    scanf("%d", &a);
+    printf("\nSum of series = %f", sum(a));
 }
 
 long int factorial(int n)
