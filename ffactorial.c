@@ -4,10 +4,10 @@
 long int factorial(int n);
 void main()
 {
-    int n;
+    int a;
     printf("Enter a number :\n");
-    scanf("%d", &n);
-    printf("factorial of %d is %d", n, factorial(n));
+    scanf("%d", &a);
+    printf("factorial of %d is %d", a, factorial(a));
 }
 long int factorial(int n)
 {
