@@ -17,13 +17,9 @@ void main()
 }
 int fibonacci(int ind)
 {
-   if (ind == 0)
+   if (ind == 0||ind == 1)
    {
-      return 0;
-   }
-   else if (ind == 1)
-   {
-      return 1;
+      return ind;
    }
    else
    {
