@@ -61,7 +61,7 @@ int main()
 
     convertToTuple(a, b, ROWS, COLUMNS);
 
-    printf("\n\nSPARSE MATRIX ");
+    printf("\n\nTUPLE FORM ");
     printTuple(b);
 
 }
