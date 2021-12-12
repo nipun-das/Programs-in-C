@@ -9,45 +9,45 @@ typedef struct term
 
 } term;
 
-void convertToTuple(int matrix[100][100], term sparse[MAX], int ROWS, int COLUMNS)
+void convertToTuple(int a[100][100], term b[MAX], int ROWS, int COLUMNS)
 {
 
-    sparse[0].row = ROWS;
-    sparse[0].col = COLUMNS;
+    b[0].row = ROWS;
+    b[0].col = COLUMNS;
     int i, j, k = 1;
     for (i = 0; i < ROWS; i++)
     {
         for (j = 0; j < COLUMNS; j++)
         {
-            if (matrix[i][j] != 0)
+            if (a[i][j] != 0)
             {
-                sparse[k].row = i;
-                sparse[k].col = j;
-                sparse[k].value = matrix[i][j];
+                b[k].row = i;
+                b[k].col = j;
+                b[k].value = a[i][j];
                 k++;
             }
         }
     }
-    sparse[0].value = k - 1; //value = no.of non-zero elements = k-1
+    b[0].value = k - 1; //value = no.of non-zero elements = k-1
 }
 
 
-void printTuple(term sparse[MAX])
+void printTuple(term b[MAX])
 {
     int i;
     printf("\n");
     printf("ROW  COLUMN  VALUE");
-    for (i = 0; i <= sparse[0].value; i++)
+    for (i = 0; i <= b[0].value; i++)
     {
         printf("\n");
-        printf("%d\t%d\t%d", sparse[i].row, sparse[i].col, sparse[i].value);
+        printf("%d\t%d\t%d", b[i].row, b[i].col, b[i].value);
     }
 }
 
 int main()
 {
-    int i, j, matrix[100][100], ROWS, COLUMNS;
-    term sparse[MAX];
+    int i, j, a[100][100], ROWS, COLUMNS;
+    term b[MAX];
     printf("\nEnter matrix order: ");
     scanf("%d %d", &ROWS, &COLUMNS);
     printf("\nEnter matrix: ");
@@ -55,24 +55,13 @@ int main()
     {
         for (j = 0; j < COLUMNS; j++)
         {
-            scanf("%d", &matrix[i][j]);
+            scanf("%d", &a[i][j]);
         }
     }
 
-    printf("\nENTERED MATRIX\n");    
-    for (i = 0; i < ROWS; i++)
-    {
-        for (j = 0; j < COLUMNS; j++)
-        {
-            printf("%d\t", matrix[i][j]);
-        }
-        printf("\n");
-    }
+    convertToTuple(a, b, ROWS, COLUMNS);
 
-
-    convertToTuple(matrix, sparse, ROWS, COLUMNS);
-
-    printf("\n\nSPARSE MATRIX");
-    printTuple(sparse);
+    printf("\n\nSPARSE MATRIX ");
+    printTuple(b);
 
 }
