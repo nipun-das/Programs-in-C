@@ -1,23 +1,23 @@
 #include <stdio.h>
-#define MAX_TERMS 100
+#define MAX 100
 
-struct sparseMatrix
+typedef struct term
 {
     int row;
     int col;
     int value;
 
-} sparse[MAX_TERMS], sparseTranspose[MAX_TERMS];
+} term;
 
-void convertToSparseMatrix(int matrix[100][100], struct sparseMatrix sparse[MAX_TERMS], int MATRIX_ROWS, int MATRIX_COLUMNS)
+void convertToTuple(int matrix[100][100], term sparse[MAX], int ROWS, int COLUMNS)
 {
 
-    sparse[0].row = MATRIX_ROWS;
-    sparse[0].col = MATRIX_COLUMNS;
+    sparse[0].row = ROWS;
+    sparse[0].col = COLUMNS;
     int i, j, k = 1;
-    for (i = 0; i < MATRIX_ROWS; i++)
+    for (i = 0; i < ROWS; i++)
     {
-        for (j = 0; j < MATRIX_COLUMNS; j++)
+        for (j = 0; j < COLUMNS; j++)
         {
             if (matrix[i][j] != 0)
             {
@@ -31,14 +31,13 @@ void convertToSparseMatrix(int matrix[100][100], struct sparseMatrix sparse[MAX_
     sparse[0].value = k - 1; //value = no.of non-zero elements = k-1
 }
 
-
-void transposeSparseMatrix(int matrix[100][100], struct sparseMatrix sparse[MAX_TERMS], int MATRIX_ROWS, int MATRIX_COLUMNS)
+void transposeTuple(int matrix[100][100], term sparse[MAX], term sparseTranspose[MAX], int ROWS, int COLUMNS)
 {
-    sparseTranspose[0].row = MATRIX_COLUMNS;
-    sparseTranspose[0].col = MATRIX_ROWS;
+    sparseTranspose[0].row = COLUMNS;
+    sparseTranspose[0].col = ROWS;
     sparseTranspose[0].value = sparse[0].value;
     int i, j, k = 1;
-    for (i = 0; i < MATRIX_COLUMNS; i++)
+    for (i = 0; i < COLUMNS; i++)
     {
         for (j = 1; j <= sparse[0].value; j++)
         {
@@ -53,7 +52,7 @@ void transposeSparseMatrix(int matrix[100][100], struct sparseMatrix sparse[MAX_
     }
 }
 
-void printSparseMatrix(struct sparseMatrix sparse[MAX_TERMS])
+void printTuple(term sparse[MAX])
 {
     int i;
     printf("\n");
@@ -67,24 +66,25 @@ void printSparseMatrix(struct sparseMatrix sparse[MAX_TERMS])
 
 int main()
 {
-    int i, j, matrix[100][100], MATRIX_ROWS, MATRIX_COLUMNS;
-    printf("\nEnter matrix dimensions: ");
-    scanf("%d %d", &MATRIX_ROWS, &MATRIX_COLUMNS);
+    int i, j, matrix[100][100], ROWS, COLUMNS;
+    term sparse[MAX], sparseTranspose[MAX];
+    printf("\nEnter matrix order: ");
+    scanf("%d %d", &ROWS, &COLUMNS);
     printf("\nEnter matrix: ");
-    for (i = 0; i < MATRIX_ROWS; i++)
+    for (i = 0; i < ROWS; i++)
     {
-        for (j = 0; j < MATRIX_COLUMNS; j++)
+        for (j = 0; j < COLUMNS; j++)
         {
             scanf("%d", &matrix[i][j]);
         }
     }
 
-    convertToSparseMatrix(matrix, sparse, MATRIX_ROWS, MATRIX_COLUMNS);
+    convertToTuple(matrix, sparse, ROWS, COLUMNS);
 
     printf("\n\nSPARSE MATRIX ");
-    printSparseMatrix(sparse);
+    printTuple(sparse);
 
     printf("\n\nTRANSPOSE OF SPARSE MATRIX ");
-    transposeSparseMatrix(matrix, sparse, MATRIX_ROWS, MATRIX_COLUMNS);
-    printSparseMatrix(sparseTranspose);
+    transposeTuple(matrix, sparse, sparseTranspose, ROWS, COLUMNS);
+    printTuple(sparseTranspose);
 }
