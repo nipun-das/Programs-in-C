@@ -1,4 +1,4 @@
-//2D array matrix
+2D array matrix
 #include <stdio.h>
 void main()
 {
